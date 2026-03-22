@@ -8,6 +8,7 @@ A shared collection of [Cursor Rules](https://docs.cursor.com/context/rules) tha
 .cursor/rules/
 ├── general/        # Universal engineering best practices (language-agnostic)
 ├── tech/           # Language, framework, and tooling conventions
+├── design-styles/  # Reusable visual style library (inactive by default)
 └── project/        # Domain-specific rules for the current project
 ```
 
@@ -15,7 +16,8 @@ A shared collection of [Cursor Rules](https://docs.cursor.com/context/rules) tha
 |---|---|---|---|---|
 | `general/` | Language-agnostic engineering principles | `["**"]` — always active | Rarely | Yes — copy to any project as-is |
 | `tech/` | Per-language / framework / tool conventions | Scoped to file types (e.g., `*.ts`, `*.py`) | Occasionally | Yes — for projects on the same stack |
-| `project/` | Business logic, third-party integration quirks, domain rules | Scoped to project paths | Often | No — unique per project |
+| `design-styles/` | Style library (`bauhaus`, `cyberpunk`, etc.) | `[]` (library mode, inactive) | Rarely | Yes — shared across UI projects |
+| `project/` | Domain rules + active style selection | Scoped to project paths/UI paths | Often | No — unique per project |
 
 ## How It Works
 
@@ -27,7 +29,7 @@ globs: ["apps/backend/src/api/**/*.py"]
 ---
 ```
 
-When you open or edit a file matching the glob pattern, Cursor automatically injects the rule into the AI's context. The subfolder structure (`general/`, `tech/`, `project/`) is purely for human organization — Cursor scans all subdirectories recursively.
+When you open or edit a file matching the glob pattern, Cursor automatically injects the rule into the AI's context. The subfolder structure (`general/`, `tech/`, `design-styles/`, `project/`) is purely for human organization — Cursor scans all subdirectories recursively.
 
 ## Using This in Your Projects
 
@@ -126,6 +128,22 @@ These are examples from a WooCommerce e-commerce project. Replace with rules for
 | `scraping.md` | Anti-detection, Playwright best practices, data extraction |
 | `woocommerce-api.md` | Product publishing pipeline, variation sync, image handling |
 | `woocommerce-theme.md` | WordPress PHP standards, WooCommerce hooks, theme assets |
+| `active-design-style.md` | Single source of truth for selected style in this project |
+
+### `design-styles/` — Visual Style Library
+
+All files in this folder use `globs: []` so they stay inactive until selected via `project/active-design-style.md`.
+
+| File | Covers |
+|---|---|
+| `brutalism.md` | Raw, harsh, asymmetrical, intentionally rough interfaces |
+| `neobrutalism.md` | Bold playful UI with thick outlines and hard shadows |
+| `bauhaus.md` | Functional geometric composition and grid-driven hierarchy |
+| `neumorphism.md` | Soft depth, tactile controls, subtle highlights/shadows |
+| `retro-futurism.md` | Nostalgic future, vintage + sci-fi visual treatment |
+| `cyberpunk.md` | Dark neon, high-tech layered interfaces |
+| `glassmorphism.md` | Frosted translucent panels with depth and blur |
+| `flat-design.md` | Minimal 2D UI with clean hierarchy and solid colors |
 
 ## Adapting for Your Project
 
@@ -147,6 +165,39 @@ These are examples from a WooCommerce e-commerce project. Replace with rules for
    | React + Next.js | Keep existing `react-frontend.md`, `typescript-backend.md` |
 
 4. **Replace `project/`** — delete the example files and add rules specific to your domain (payment logic, auth quirks, API integration gotchas, etc.).
+5. **Pick one visual style** — set `.cursor/rules/project/active-design-style.md` with your selected style and matching style file.
+
+### Using design styles in a project
+
+Use this pattern to avoid conflicting style guidance:
+
+1. Keep all style files in `.cursor/rules/design-styles/` with `globs: []` (library mode).
+2. Keep a single active selector in `.cursor/rules/project/active-design-style.md`.
+3. In `active-design-style.md`, set:
+   - `STYLE_NAME` to one of:
+     - `brutalism`
+     - `neobrutalism`
+     - `bauhaus`
+     - `neumorphism`
+     - `retro-futurism`
+     - `cyberpunk`
+     - `glassmorphism`
+     - `flat-design`
+   - `STYLE_FILE` to the matching file in `.cursor/rules/design-styles/`
+4. Scope `active-design-style.md` globs to your UI files so style guidance appears during UI work.
+
+Example:
+
+```markdown
+---
+globs: ["**/*.tsx", "**/*.css", "**/components/**/*", "**/ui/**/*"]
+---
+
+# Active Design Style
+
+- **STYLE_NAME:** `bauhaus`
+- **STYLE_FILE:** `.cursor/rules/design-styles/bauhaus.md`
+```
 
 ### Writing a new rule
 
