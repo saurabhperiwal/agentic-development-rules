@@ -1,0 +1,32 @@
+# Cursor Rules Index
+
+Use this file as a lightweight entrypoint only.
+
+## Canonical Source
+- Canonical rules live in `.cursor/rules/`.
+- Do not duplicate rule content in this file.
+- If there is any conflict, `.cursor/rules/` always wins.
+
+## Rule Resolution Order
+1. `.cursor/rules/project/active-design-style.md`
+2. `.cursor/rules/project/*.md`
+3. `.cursor/rules/tech/*.md`
+4. `.cursor/rules/general/*.md`
+5. `.cursor/rules/design-styles/*.md` (reference library; inactive unless selected)
+
+## What To Load By Context
+- Always load all files in `.cursor/rules/general/`.
+- Load relevant files from `.cursor/rules/tech/` by language/framework/path.
+- Load relevant files from `.cursor/rules/project/` for domain-specific behavior.
+- For UI work, always load `.cursor/rules/project/active-design-style.md`.
+- Then load only the style file referenced by `STYLE_FILE` in `active-design-style.md`.
+
+## Active Design Style
+- Source of truth: `.cursor/rules/project/active-design-style.md`
+- Current style is defined there (do not hardcode it here).
+- Do not mix multiple design styles unless explicitly requested.
+
+## Maintenance Policy
+- Keep this file short and stable.
+- Add or edit rule details in `.cursor/rules/` files, not here.
+- Update this file only when folder structure or resolution logic changes.
