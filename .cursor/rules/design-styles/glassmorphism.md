@@ -6,6 +6,10 @@ globs: []
 
 Use this rule as a style reference. Keep it in library mode (`globs: []`) until selected for a project.
 
+## Animation priority
+
+**Motion should feel like glass moving in space:** **blur/frost transitions**, **opacity + translate**, **scale** for depth, and **backdrop-filter** changes on hover. Keep motion **smooth but light** (often 200–350ms, **ease-out**). Charts and cards should **float** into place with soft staging. Respect **`prefers-reduced-motion`** (reduce blur animation and parallax).
+
 ## Visual Language
 - Frosted glass layers over vibrant, blurred backgrounds.
 - Light, airy, and modern with strong depth perception.
@@ -31,9 +35,17 @@ Use this rule as a style reference. Keep it in library mode (`globs: []`) until 
 - Keep spacing generous to avoid visual clutter.
 - Avoid overstacking too many translucent panels.
 
-## Motion
-- Smooth fade/blur transitions and elevation changes.
-- Interactions should feel lightweight and fluid.
+## Motion & animation
+- **Panels**: fade/slide with **backdrop blur** settling; modals **scale in** slightly from ~0.96–1.
+- **Hover**: **brighten edge highlight** and **lift** (translateY) subtly; avoid heavy shadows—use **layer separation**.
+- **Charts**: **ease-in-out** data morphs; **crossfade** series; tooltip as **frosted popover**.
+
+## Dashboards & charting
+When building **dashboards, analytics, or admin UIs**:
+- **Libraries that theme well on layered UI**: **Apache ECharts**, **ApexCharts**, **Nivo** (semi-transparent fills), **Chart.js**; **React** → **Recharts** with **custom glass tooltip** containers.
+- **Vue** → **ECharts** / **vue-chartjs**; **Angular** → **ngx-charts** or **ECharts** with translucent panels behind canvas/SVG.
+- Place charts **inside frosted cards**; align **grid/tick** opacity with glass borders for cohesion.
+- **Animate** load and updates; **simplify blur/parallax** when **`prefers-reduced-motion`** is set.
 
 ## Avoid
 - Opaque heavy blocks that remove the glass effect.

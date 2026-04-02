@@ -23,8 +23,8 @@ globs: [
 This file defines the single design style to follow for this project.
 
 ## Selected Style
-- **STYLE_NAME:** `bauhaus`
-- **STYLE_FILE:** `.cursor/rules/design-styles/bauhaus.md`
+- **STYLE_NAME:** `origami`
+- **STYLE_FILE:** `.cursor/rules/design-styles/origami.md`
 
 ## Rules of Use
 - Apply the selected style to all new UI and UX decisions.
@@ -47,3 +47,4 @@ This file defines the single design style to follow for this project.
 - `cyberpunk`
 - `glassmorphism`
 - `flat-design`
+- `origami`

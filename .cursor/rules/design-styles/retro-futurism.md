@@ -6,6 +6,10 @@ globs: []
 
 Use this rule as a style reference. Keep it in library mode (`globs: []`) until selected for a project.
 
+## Animation priority
+
+**Motion is part of the era fantasy:** **phosphor fade**, **subtle scanlines**, **CRT-style** flicker (very restrained), **neon tube** illuminate, and **sweep** transitions. Use **sound-free** UI metaphors only. Keep body copy **stable**; animate **chrome** around it. **Strongly** respect **`prefers-reduced-motion`** (disable flicker, reduce sweeps).
+
 ## Visual Language
 - Nostalgic future aesthetic inspired by past-era visions.
 - Mix vintage motifs with futuristic UI structure.
@@ -31,9 +35,17 @@ Use this rule as a style reference. Keep it in library mode (`globs: []`) until 
 - Controlled asymmetry is acceptable.
 - Preserve strong reading flow despite stylistic treatment.
 
-## Motion
-- Neon glow transitions, subtle distortion, or sweep effects.
-- Motion should reinforce theme without hurting clarity.
+## Motion & animation
+- **Entrances**: **wipe** or **fade with horizontal band**; **title** can **glow on** once.
+- **Interaction**: **button** gets **tube glow** pulse; **panels** **slide** with **slight overscan** optional.
+- **Charts**: **line draw** like a **scope**; **bar grow** with **post glow**; **palette** matches neon/warm vintage lane.
+
+## Dashboards & charting
+When building **dashboards, analytics, or admin UIs**:
+- **Libraries with stylable SVG/canvas**: **Apache ECharts**, **Nivo**, **Chart.js** (custom plugins), **ApexCharts**; **React** → **Recharts** + **CSS** scanline/glow wrappers; **custom** → **D3.js** for CRT-style paths.
+- **Vue** → **ECharts**; **Angular** → **ECharts** / **ngx-charts** with heavy theming.
+- Build **dashboard tiles** as **retro panels**; animate **series reveal** on load and **refresh**.
+- **Disable** flicker/sweep and **shorten** all motion when **`prefers-reduced-motion`** is set.
 
 ## Avoid
 - Bland generic UI that removes era-specific character.

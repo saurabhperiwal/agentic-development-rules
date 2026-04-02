@@ -6,6 +6,10 @@ globs: []
 
 Use this rule as a style reference. Keep it in library mode (`globs: []`) until selected for a project.
 
+## Animation priority
+
+**Motion clarifies, not decorates.** Use **quick** (150–250ms) **opacity, slide, and scale** for feedback; **consistent easing** across components. Animate **lists** (enter/exit), **skeleton → content** swaps, and **chart redraws** so state changes are obvious. Respect **`prefers-reduced-motion`**.
+
 ## Visual Language
 - Minimal, clean, two-dimensional interface treatment.
 - Prioritize clarity, usability, and scalability.
@@ -31,9 +35,17 @@ Use this rule as a style reference. Keep it in library mode (`globs: []`) until 
 - Ample whitespace and straightforward flow.
 - Keep interaction paths obvious.
 
-## Motion
-- Simple, fast transitions focused on feedback.
-- Avoid heavy 3D or ornamental animation.
+## Motion & animation
+- **Micro**: pressed states via **tint change** or **1–2% scale**; focus rings **instant**.
+- **Macro**: page/section transitions **simple** (fade or short slide); avoid 3D flips and heavy parallax.
+- **Data**: when values update, **tween numbers** and **morph bars/lines** subtly—flat color only.
+
+## Dashboards & charting
+When building **dashboards, analytics, or admin UIs**:
+- **Use a mainstream charting library** with flat theming: **Chart.js**, **Apache ECharts**, or **ApexCharts**; **React** → **Recharts** or **Tremor**; **Vue** → **vue-chartjs** / **ECharts**; **Angular** → **ngx-charts**.
+- **Custom visuals**: **visx** or **D3.js** when you need unique flat geometry (justify the cost).
+- **Charts** should match **solid fills**, **clear grids**, and **semantic colors**; tooltips **flat**, not glassy.
+- Enable **tweened updates** where helpful; reduce motion per **`prefers-reduced-motion`**.
 
 ## Avoid
 - Skeuomorphic textures, heavy gradients, and visual clutter.
