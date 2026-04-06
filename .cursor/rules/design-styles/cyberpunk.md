@@ -49,5 +49,15 @@ When building **dashboards, analytics, or admin UIs**:
 - Map **palette** to neon accents on **dark canvas**; tooltips as **HUD panels**.
 - **Animate** load and update; **disable or simplify** under **`prefers-reduced-motion`**.
 
+## Imagery
+
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
+- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Match images to section topics--derive search terms from the page context.
+- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed.
+- **Style fit**: prefer **dark, neon-lit, urban, or tech** photographs--night cityscapes, screens, circuits, moody lighting. Apply CSS `hue-rotate()`, `brightness()`, or overlay blends to push neon cyan/pink/violet tones.
+- **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` or `aspect-ratio` to prevent layout shift.
+- **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
+- **Fallback**: if no suitable Unsplash image exists, use a **dark gradient panel** with neon accent borders rather than a mismatched stock photo.
+
 ## Avoid
 - Soft pastel minimalism and low-contrast styling.

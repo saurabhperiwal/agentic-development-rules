@@ -302,6 +302,16 @@ Use these **component** and **variant** names when building UI or reviewing PRs.
 
 ---
 
+## Imagery
+
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
+- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Match images to section topics--derive search terms from the page context.
+- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed.
+- **Style fit**: prefer **clean, natural, well-composed** photographs consistent with Material's emphasis on clarity and approachability. Use the **dynamic color** system to tint UI surfaces from the dominant image palette when appropriate.
+- **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` or `aspect-ratio` to prevent layout shift.
+- **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
+- **Fallback**: if no suitable Unsplash image exists, use a **tonal surface placeholder** from the Material color scheme rather than a mismatched stock photo.
+
 ## Official links
 
 - [Material Design 3](https://m3.material.io) — foundations, styles, components.

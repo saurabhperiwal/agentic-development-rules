@@ -47,5 +47,15 @@ When building **dashboards, analytics, or admin UIs**:
 - **Charts** should match **solid fills**, **clear grids**, and **semantic colors**; tooltips **flat**, not glassy.
 - Enable **tweened updates** where helpful; reduce motion per **`prefers-reduced-motion`**.
 
+## Imagery
+
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
+- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Match images to section topics--derive search terms from the page context.
+- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed.
+- **Style fit**: prefer **clean, well-lit, minimal-background** photographs. Simple compositions with solid or near-solid backgrounds integrate best with flat surfaces. Avoid busy textures or heavy bokeh.
+- **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` or `aspect-ratio` to prevent layout shift.
+- **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
+- **Fallback**: if no suitable Unsplash image exists, use a **solid semantic-color block** rather than a mismatched stock photo.
+
 ## Avoid
 - Skeuomorphic textures, heavy gradients, and visual clutter.

@@ -47,5 +47,15 @@ When building **dashboards, analytics, or admin UIs**:
 - **Custom**: **D3.js** only if you need neumorphic **custom shading** per segment (high effort).
 - **Animate** updates gently; **flatten** motion under **`prefers-reduced-motion`**.
 
+## Imagery
+
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
+- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Match images to section topics--derive search terms from the page context.
+- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed.
+- **Style fit**: prefer **soft, muted, low-contrast** photographs that blend into the monotone surface. Use CSS `filter: saturate(0.5) brightness(1.05)` or similar to match the neumorphic palette. Images should feel embedded, not overlaid.
+- **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` or `aspect-ratio` to prevent layout shift.
+- **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
+- **Fallback**: if no suitable Unsplash image exists, use a **soft-shadow inset placeholder** tinted to the surface color rather than a mismatched stock photo.
+
 ## Avoid
 - Harsh borders, neon palettes, and heavy outlines.

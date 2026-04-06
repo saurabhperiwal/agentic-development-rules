@@ -48,5 +48,15 @@ When building **dashboards, analytics, or admin UIs**:
 - Prefer **rectilinear** chart types first (bars, stacked bars, simple lines); **grids and ticks** as clear structural lines.
 - **Animate data updates** with short tweens; honor **`prefers-reduced-motion`**.
 
+## Imagery
+
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
+- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Match images to section topics--derive search terms from the page context.
+- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed.
+- **Style fit**: prefer images with **strong geometry, clear composition, and bold primary tones**. Flat, graphic photographs with visible structure work best. Apply CSS filters (contrast, saturation) if needed to align with the red/yellow/blue palette.
+- **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` or `aspect-ratio` to prevent layout shift.
+- **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
+- **Fallback**: if no suitable Unsplash image exists, use a **solid color block** in palette colors rather than a mismatched stock photo.
+
 ## Avoid
 - Chaotic compositions and over-stylized textures.
