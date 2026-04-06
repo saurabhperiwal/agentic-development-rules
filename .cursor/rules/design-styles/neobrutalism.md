@@ -50,13 +50,14 @@ When building **dashboards, analytics, or admin UIs**:
 
 ## Imagery
 
-- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
-- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Match images to section topics--derive search terms from the page context.
-- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed.
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs (free under the Unsplash License).
+- **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. Derive search terms from the page or section topic.
+- **No broken links**: **NEVER fabricate or guess** an Unsplash photo ID or URL. Use **WebFetch** or **WebSearch** to search `unsplash.com/s/photos/<search-terms>` and extract a real, verified photo URL. If you cannot verify a URL, use a **CSS placeholder** instead of a potentially broken `<img>`.
+- **URL format** (once verified): `https://images.unsplash.com/photo-<VERIFIED_ID>?w=<WIDTH>&q=80&auto=format`.
 - **Style fit**: prefer **bright, graphic, punchy** photographs with bold subjects. Images should feel playful and confident. Apply CSS `saturate()` or `brightness()` to push vibrancy if needed. Pair with **thick borders** around image containers.
 - **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` or `aspect-ratio` to prevent layout shift.
 - **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
-- **Fallback**: if no suitable Unsplash image exists, use a **saturated color block** with the neobrutalist palette rather than a mismatched stock photo.
+- **Fallback**: if no verified Unsplash image is available, use a **saturated color block** with the neobrutalist palette rather than a broken or mismatched image.
 
 ## Avoid
 - Subtle, low-contrast palettes and soft visual treatment.

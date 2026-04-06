@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kiri Sushi — omakase and seasonal nigiri at Yonge & Eglinton, Midtown Toronto. Reservations and walk-ins welcome."
+    />
+    <title>Kiri Sushi | Yonge & Eglinton, Toronto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#top" aria-label="Kiri Sushi home">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 32 L20 8 L36 32 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M12 28 L20 16 L28 28" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5" />
+            </svg>
+          </span>
+          <span class="logo-text">Kiri<span class="logo-accent">Sushi</span></span>
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#omakase">Omakase</a></li>
+            <li><a href="#visit">Visit</a></li>
+            <li><a href="#reserve" class="nav-cta">Reserve</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="hero-facet hero-facet--bg" aria-hidden="true"></div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Yonge & Eglinton · Midtown Toronto</p>
+            <h1 class="hero-title">Seasonal nigiri, folded with care.</h1>
+            <p class="hero-lede">
+              Counter omakase, crisp sashimi, and small plates inspired by the Pacific coast—served steps from
+              Eglinton Station.
+            </p>
+            <div class="hero-actions">
+              <a href="#reserve" class="btn btn-primary">Book a seat</a>
+              <a href="#menu" class="btn btn-ghost">View highlights</a>
+            </div>
+          </div>
+          <figure class="hero-visual">
+            <div class="hero-image-frame">
+              <img
+                src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=1200&q=80"
+                srcset="
+                  https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=800&q=80 800w,
+                  https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=1200&q=80 1200w
+                "
+                sizes="(max-width: 52rem) 100vw, 45vw"
+                width="900"
+                height="1125"
+                alt="Assorted nigiri and maki on a dark ceramic plate at a sushi counter"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+            <figcaption class="hero-caption">Chef’s selection changes with the market.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="strip strip--crease" aria-hidden="true"></section>
+
+      <section class="section section--about" id="about">
+        <div class="section-inner about-grid">
+          <div class="about-facet">
+            <h2 class="section-title">Paper-thin cuts. Honest fish.</h2>
+            <p class="section-text">
+              We work with trusted suppliers and let each piece speak for itself—warm shari, barely-touched
+              wasabi, and knives kept sharp enough to whisper through bluefin. Midtown deserves a quiet room
+              and a steady hand.
+            </p>
+          </div>
+          <ul class="about-stats" role="list">
+            <li class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 26 L16 6 L26 26 Z" stroke="currentColor" stroke-width="1.25" />
+                  <path d="M11 22 L16 12 L21 22" stroke="currentColor" stroke-width="1" opacity="0.45" />
+                </svg>
+              </span>
+              <span class="stat-value">12</span>
+              <span class="stat-label">seats at the counter</span>
+            </li>
+            <li class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon
+                    points="16,4 28,14 22,28 10,28 4,14"
+                    stroke="currentColor"
+                    stroke-width="1.25"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              <span class="stat-value">5–7</span>
+              <span class="stat-label">courses at lunch omakase</span>
+            </li>
+            <li class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 18 L16 8 L28 18 L22 28 L10 28 Z" stroke="currentColor" stroke-width="1.25" fill="none" />
+                </svg>
+              </span>
+              <span class="stat-value">Tue–Sun</span>
+              <span class="stat-label">dinner service</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--menu" id="menu">
+        <div class="section-inner">
+          <header class="section-header">
+            <h2 class="section-title">Menu highlights</h2>
+            <p class="section-sub">A few favourites—full list at the restaurant.</p>
+          </header>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-card-header">
+                <h3>Chef’s nigiri</h3>
+                <span class="menu-price">$28</span>
+              </div>
+              <p>Eight pieces plus hand roll. Market fish, classic shari.</p>
+            </article>
+            <article class="menu-card">
+              <div class="menu-card-header">
+                <h3>Chirashi bowl</h3>
+                <span class="menu-price">$34</span>
+              </div>
+              <p>Seasonal sashimi over seasoned rice, pickles, miso soup.</p>
+            </article>
+            <article class="menu-card">
+              <div class="menu-card-header">
+                <h3>Crispy prawn roll</h3>
+                <span class="menu-price">$18</span>
+              </div>
+              <p>Tempura prawn, cucumber, tobiko, yuzu mayo.</p>
+            </article>
+            <article class="menu-card">
+              <div class="menu-card-header">
+                <h3>Warm sake flight</h3>
+                <span class="menu-price">$22</span>
+              </div>
+              <p>Three pours from small Ontario-friendly breweries.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--omakase" id="omakase">
+        <div class="omakase-band">
+          <div class="section-inner omakase-grid">
+            <figure class="omakase-visual">
+              <div class="omakase-image-frame">
+                <img
+                  src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=1000&q=80"
+                  srcset="
+                    https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=640&q=80 640w,
+                    https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=1000&q=80 1000w
+                  "
+                  sizes="(max-width: 52rem) 100vw, 42vw"
+                  width="800"
+                  height="1000"
+                  alt="Platter of assorted sushi and sashimi with soy sauce and chopsticks"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
+            <div class="omakase-copy">
+              <h2 class="section-title">Evening omakase</h2>
+              <p class="section-text">
+                Sit at the counter for a paced journey—sashimi, grilled bites, nigiri, and something sweet. We
+                note allergies and pescatarian preferences with 24 hours’ notice.
+              </p>
+              <ul class="omakase-meta">
+                <li><span class="meta-crease"></span> From $95 per guest · wine &amp; sake pairings optional</li>
+                <li><span class="meta-crease"></span> Two seatings nightly · reservations recommended</li>
+              </ul>
+              <a href="#reserve" class="btn btn-primary">Request a time</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--visit" id="visit">
+        <div class="section-inner visit-grid">
+          <div class="visit-card">
+            <h2 class="section-title">Visit us</h2>
+            <address class="visit-address">
+              <strong>Kiri Sushi</strong><br />
+              Midtown · Yonge &amp; Eglinton<br />
+              Toronto, ON M4P&nbsp;2E6<br />
+              <span class="visit-note">5-minute walk from Eglinton TTC · Green P nearby</span>
+            </address>
+            <div class="visit-hours">
+              <h3 class="visit-subhead">Hours</h3>
+              <dl class="hours-list">
+                <div>
+                  <dt>Tue–Thu</dt>
+                  <dd>11:30–2:30 · 5:00–10:00</dd>
+                </div>
+                <div>
+                  <dt>Fri–Sat</dt>
+                  <dd>11:30–3:00 · 5:00–11:00</dd>
+                </div>
+                <div>
+                  <dt>Sunday</dt>
+                  <dd>12:00–3:00 · 5:00–9:00</dd>
+                </div>
+                <div>
+                  <dt>Monday</dt>
+                  <dd>Closed</dd>
+                </div>
+              </dl>
+            </div>
+            <a
+              class="btn btn-ghost visit-map"
+              href="https://www.openstreetmap.org/search?query=Yonge%20and%20Eglinton%2C%20Toronto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open map
+            </a>
+          </div>
+          <div class="visit-map-embed" aria-label="Map area placeholder">
+            <div class="map-facet">
+              <p class="map-placeholder-text">Yonge &amp; Eglinton</p>
+              <p class="map-placeholder-sub">Midtown Toronto</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--reserve" id="reserve">
+        <div class="section-inner reserve-panel">
+          <h2 class="section-title">Reservations</h2>
+          <p class="section-text reserve-text">
+            For parties up to four, call or email. Larger groups and private buyouts—ask for our events sheet.
+          </p>
+          <div class="reserve-actions">
+            <a class="btn btn-primary" href="tel:+14165550123">Call (416) 555-0123</a>
+            <a class="btn btn-ghost" href="mailto:hello@kirisushi.example">hello@kirisushi.example</a>
+          </div>
+          <p class="reserve-fine">
+            Phone and email are placeholders for this demo site—replace with your real contact details.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">Kiri Sushi</p>
+        <p class="footer-meta">Yonge &amp; Eglinton · Toronto</p>
+        <p class="footer-copy">© <span id="year"></span> Kiri Sushi. Demo website.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -100,11 +100,15 @@ When building **dashboards, analytics, or admin UIs**:
 
 ## Imagery
 
-- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs. Images are free to use under the Unsplash License.
+- **Source**: use **[Unsplash](https://unsplash.com)** for all photographs (free under the Unsplash License).
 - **Relevance over decoration**: every image must relate to the **project's domain and content**. Do not use generic stock scenery. A restaurant site gets food and interior shots; a fintech dashboard gets workspace or cityscape imagery; a portfolio gets craft and material close-ups.
 - **Search strategy**: derive Unsplash search terms from the **page or section topic** (e.g. for an "About the team" section on a clinic site, search `medical team portrait`, not `random office`).
-- **URL format**: use `https://images.unsplash.com/photo-<PHOTO_ID>?w=<WIDTH>&q=80&auto=format` for optimized delivery. Set `w` to the rendered width needed (e.g. `800`, `1200`, `1600`). Always include `q=80&auto=format`.
+- **No broken links**: **NEVER fabricate or guess** an Unsplash photo ID or URL. To get a valid image:
+  1. Use the **WebFetch** or **WebSearch** tool to search `unsplash.com/s/photos/<search-terms>` and extract a real photo URL from the results.
+  2. Only embed URLs you have **verified exist** by fetching them.
+  3. If you cannot verify a URL at build time, use a **CSS placeholder** (styled to this design system) instead of a potentially broken `<img>` tag.
+- **URL format** (once verified): `https://images.unsplash.com/photo-<VERIFIED_ID>?w=<WIDTH>&q=80&auto=format`. Set `w` to the rendered width (e.g. `800`, `1200`, `1600`).
 - **Style fit**: prefer images with **clean composition, restrained color, and visible structure**--photographs that feel like they could sit on a folded paper surface. Desaturate or tint in CSS if needed to match the paper/ink palette.
 - **Lazy loading**: always add `loading="lazy"` and explicit `width`/`height` attributes (or `aspect-ratio` in CSS) to prevent layout shift.
 - **Alt text**: every `<img>` must have a **descriptive, project-relevant** `alt` attribute. Never leave it empty or generic.
-- **Fallback**: if no suitable Unsplash image exists, use a **solid color facet placeholder** styled to the origami palette rather than a mismatched stock photo.
+- **Fallback**: if no verified Unsplash image is available, use a **solid color facet placeholder** styled to the origami palette rather than a broken or mismatched image.
